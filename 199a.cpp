@@ -3,14 +3,14 @@ using namespace std;
 #define rep(i,n) for(int i=0;i<n;++i)
 using ll = long long;
 using P = pair<int, int>;
-#include<string>
-#include<vector>
 
 int main() {
-    //215
-    string s; cin >> s;
-    if(s=="Hello,World!") cout<<"AC"<<endl;
-    else cout << "WA" << endl;
+    //199
+    int a, b, c;
+    cin >> a >> b >> c;
 
+    if (a * a + b * b < c * c)cout << "Yes" << endl;
+    else cout << "No" << endl;
+   
     return 0;
 }
