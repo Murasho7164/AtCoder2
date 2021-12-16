@@ -4,17 +4,17 @@ using namespace std;
 using ll = long long;
 using P = pair<int, int>;
 
-
-
 int main() {
-    //215
-    ll n; cin >> n;
-    int k = 0;
+    //172
+    string s, t;
+    cin >> s >> t;
+    int count = 0;
 
-    while (n >= pow(2, k)) {
-        k++;
+    rep(i, s.length() ) {
+        if (s[i] != t[i])count++;
     }
-    cout << k-1 << endl;
+
+    cout << count << endl;
 
     return 0;
 }
