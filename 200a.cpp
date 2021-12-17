@@ -7,19 +7,10 @@ typedef int long long ll;
 const int mod = 1000000007;
 
 int main() {
-    //207
-    int a, b, c;
-    cin >> a >> b >> c;
+    //200
+    int n; cin >> n;
     
-    if (a >= c && b >= c) {
-        cout << a + b << endl;
-    }
-    else if(a >= b && c >= b) {
-        cout << a + c << endl;
-    }
-    else {
-        cout << b + c << endl;
-    }
+    cout << (n-1) / 100 + 1 << endl;
 
     return 0;
 }
