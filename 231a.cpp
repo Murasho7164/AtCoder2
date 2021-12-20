@@ -5,12 +5,10 @@ using ll = long long;
 using P = pair<int, int>;
 
 int main() {
-    //bs
-    int a, b, c;
-    cin >> a >> b >> c;
+    //231
+    int d; cin >> d;
 
-    string s; cin >> s;
-    cout << a + b + c <<" "<< s << endl;
+    cout<<(double)d/100<<endl;
 
     return 0;
 }
