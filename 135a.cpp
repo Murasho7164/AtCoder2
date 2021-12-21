@@ -5,10 +5,14 @@ using ll = long long;
 using P = pair<int, int>;
 
 int main() {
-    //231
-    int d; cin >> d;
+    //135
+    ll a, b;
+    cin >> a>> b;
 
-    cout<<(double)d/100<<endl;
+    if ((a + b) % 2 == 0) {
+        cout << (a + b) / 2 << endl;
+    }
+    else cout << "IMPOSSIBLE" << endl;
 
     return 0;
 }
