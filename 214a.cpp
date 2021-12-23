@@ -5,17 +5,14 @@ using ll = long long;
 using P = pair<int, int>;
 
 int main() {
-    //194
-    int a, b;
-    cin >> a >> b;
+    //214
+    int n; cin >> n;
     int ans;
 
-    if (a + b >= 15 && b >= 8)ans = 1;
-    else if (a + b >= 10 && b >= 3)ans = 2;
-    else if (a + b >= 3)ans = 3;
-    else ans = 4;
+    if (n <= 125)ans = 4;
+    else if (n <= 211)ans = 6;
+    else ans = 8;
 
     cout << ans << endl;
-
     return 0;
 }
