@@ -5,11 +5,11 @@ using ll = long long;
 using P = pair<int, int>;
 
 int main() {
-    //217
-    string s, t;
-    cin >> s >> t;
-    if (s < t)cout << "Yes" << endl;
-    else cout << "No" << endl;
+    //218
+    vector<int> p(26);
+    rep(i,26) cin >> p[i];
+
+    rep(i, 26)cout << char('a' + p[i] - 1);
 
     return 0;
 }
