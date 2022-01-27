@@ -6,6 +6,7 @@ using P = pair<int, int>;
 typedef int long long ll;
 const int mod = 1000000007;
 
+
 int main() {
     //“TŒ^90_008
     //‰ðà
@@ -15,19 +16,29 @@ int main() {
     cin >> s;
 
     string a = "atcoder";
-    vector<vector<int>> dp(n, vector<int>(a.length(),0));
+    vector<vector<int>> dp(n, vector<int>(a.length(), 0));
 
-    For(i, 0, n) {
-        For(j,0,a.length()){
-            if (j == 0&&s[i]=='a') {
+    if (s[0] == a[0])dp[0][0]++;
 
+    For(i,1, n) {
+        if (s[i] == a[0]) dp[i][0]++;
+        dp[i][0] += dp[i - 1][0];
+    }
+
+    For(i, 1, n) {
+        For(j, 1, a.length()) {
+            if (s[i] == a[j]) {
+                dp[i][j] += dp[i - 1][j] + dp[i - 1][j - 1];
+                dp[i][j] %= mod;
             }
-            if (i == 0) {
-
+            else {
+                dp[i][j] += dp[i - 1][j];
             }
+            
         }
     }
 
+    cout << dp[n - 1][a.length() - 1] << endl;
 
     return 0;
 }
