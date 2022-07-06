@@ -5,33 +5,32 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>map</Title>
+      <Title>fvecprint</Title>
       <Author>
       </Author>
       <Description>
       </Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>map</Shortcut>
+      <Shortcut>fvecp</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
         <Literal Editable="true">
-          <ID>type1</ID>
-          <ToolTip>type1</ToolTip>
-          <Default>int</Default>
-          <Function>
-          </Function>
-        </Literal>
-        <Literal Editable="true">
-          <ID>type2</ID>
-          <ToolTip>type2</ToolTip>
+          <ID>val</ID>
+          <ToolTip>val</ToolTip>
           <Default>int</Default>
           <Function>
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="cpp" Delimiter="$"><![CDATA[map<$type1$,$type2$> mp; ]]></Code>
+      <Code Language="cpp" Delimiter="$"><![CDATA[void vector_print(vector<$val$> v) {
+	rep(i, v.size()) {
+		if (i != 0) cout << " ";
+		cout << v[i];
+	}
+    cout<<endl;
+}]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

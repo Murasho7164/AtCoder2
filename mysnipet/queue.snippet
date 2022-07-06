@@ -5,23 +5,26 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>fisPrime</Title>
+      <Title>queue</Title>
       <Author>
       </Author>
       <Description>
       </Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>fisPrime</Shortcut>
+      <Shortcut>que</Shortcut>
     </Header>
     <Snippet>
-      <Code Language="cpp" Delimiter="$"><![CDATA[bool isPrime(ll n) {
-	if (n < 2) return false;
-	rep(i, sqrt(n + 1)) {
-		if (n % i == 0) return false;
-	}
-	return true;
-}]]></Code>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>type</ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[queue<$type$> q;]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
