@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>bfstemplate</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>bfsq</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>s</ID>
+          <ToolTip>start</ToolTip>
+          <Default>0</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>int</ID>
+          <ToolTip>value</ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>graph</ID>
+          <ToolTip>graph</ToolTip>
+          <Default>graph</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[queue<$int$> q;
+	q.push($s$);
+
+	while (!q.empty()) {
+		$int$ pos = q.front;
+		q.pop();
+		for (auto& nex : $graph$[pos]){
+			q.push(nex);
+		}
+	}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

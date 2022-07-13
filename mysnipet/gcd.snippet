@@ -5,22 +5,32 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>fisPrime</Title>
+      <Title>gcd</Title>
       <Author>
       </Author>
       <Description>
       </Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>fisPrime</Shortcut>
+      <Shortcut>fgcd</Shortcut>
     </Header>
     <Snippet>
-      <Code Language="cpp" Delimiter="$"><![CDATA[bool isPrime(ll n) {
-	if (n < 2) return false;
-	for (ll i = 2; i * i <= n; i++) {
-		if (n % i == 0) return false;
-	}
-	return true;
+      <Declarations>
+        <Literal Editable="true">
+          <ID>int</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[$int$ gcd($int$ a, $int$ b){
+  if(a%b == 0){
+    return b;
+  }else{
+    return gcd(b, a%b);
+  }
 }]]></Code>
     </Snippet>
   </CodeSnippet>

@@ -5,22 +5,28 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>fisPrime</Title>
+      <Title>lcm</Title>
       <Author>
       </Author>
       <Description>
       </Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>fisPrime</Shortcut>
+      <Shortcut>flcm</Shortcut>
     </Header>
     <Snippet>
-      <Code Language="cpp" Delimiter="$"><![CDATA[bool isPrime(ll n) {
-	if (n < 2) return false;
-	for (ll i = 2; i * i <= n; i++) {
-		if (n % i == 0) return false;
-	}
-	return true;
+      <Declarations>
+        <Literal Editable="true">
+          <ID>int</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[$int$ lcm($int$ a, $int$ b){
+  return a*b / gcd(a, b);
 }]]></Code>
     </Snippet>
   </CodeSnippet>
